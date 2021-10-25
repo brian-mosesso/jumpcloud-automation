@@ -8,4 +8,4 @@ This repo uses maven and rest assured for the java automation. There are also po
 
 ## Usage
 
-Some things
+- Java rest-assured tests are located in jumpcloud-automation\src\main\java\TestAutomation.java
