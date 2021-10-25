@@ -8,4 +8,5 @@ This repo uses maven and rest assured for the java automation. There are also po
 
 ## Usage
 
-- Java rest-assured tests are located in jumpcloud-automation\src\main\java\TestAutomation.java
+- Java rest-assured tests are located in jumpcloud-automation\src\main\java\TestAutomation.java. These can be run in IDE as long as the broken-hashserve application is running. Dependencies should auto import as long as maven is configured.
+- Postman collection and environment can be found in jumpcloud-automation\postman. These can be imported back into Postman for running. The collection is runnable as long as the broken-hashserve application is running.
