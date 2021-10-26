@@ -3,10 +3,8 @@ import io.restassured.response.Response;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.util.HashMap;
 import java.util.Map;
-
 import static io.restassured.RestAssured.get;
 import static io.restassured.RestAssured.given;
 
@@ -73,7 +71,7 @@ public class TestAutomation {
     }
 
     @Test
-    public void post_test() {
+    public void refactoredReturnJobIdentifier() {
 
         JSONObject request = new JSONObject();
 
