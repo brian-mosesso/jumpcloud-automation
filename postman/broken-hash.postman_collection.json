@@ -19,10 +19,6 @@
 							"\r",
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Response time is at least 5 seconds\", function () {\r",
-							"    pm.expect(pm.response.responseTime).to.be.above(5000);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -34,7 +30,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"password\":\"sharks\"}",
+					"raw": "{\"password\":\"sharkydog\"}",
 					"options": {
 						"raw": {
 							"language": "json"
