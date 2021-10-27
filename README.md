@@ -17,5 +17,5 @@ The java uses rest assured, json simple, and testNG. Those were all new librarie
 
 ## Choice for coverage
 
-- Choice for coverage was based on some sort of MVP testing according to the requirements.
+- Choice for coverage was based on the requirements given and a little exploratory testing.
 - The use of automation was decided to make it easier on the tester. Though there is still a lot that can be added to automation. It's a good starting point. The automation could use more assertions so they would fail when they should, and also could be refactored.
