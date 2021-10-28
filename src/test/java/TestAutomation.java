@@ -38,6 +38,7 @@ public class TestAutomation {
                 .statusCode(200)
                 .log().all();
         Assert.assertEquals(response.getStatusCode(), 200);
+        System.out.println(response);
     }
 
     @Test(priority = 3)

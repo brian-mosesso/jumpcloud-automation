@@ -11,7 +11,7 @@ The java uses rest assured, json simple, and testNG. Those were all new librarie
 
 - Manual test cases are located in jumpcloud-automation\test-cases.xlsx and can be opened in excel. Ideally a test case management tool would be used.
 - Defects are located in jumpcloud-automation\defects.xlsx and can be opened in excel. Ideally a defect tracking tool would be used.
-- Java rest-assured tests are located in jumpcloud-automation\src\main\java\TestAutomation.java. These can be run in IDE as long as the broken-hashserve application is running. Dependencies should auto import with mvn clean install as long as maven is configured. TestNG plugin might have to manually be added.
+- Java rest-assured tests are located in jumpcloud-automation\src\test\java\TestAutomation.java. These can be run in IDE as long as the broken-hashserve application is running. Dependencies should auto import with mvn clean install as long as maven is configured. TestNG plugin might have to manually be added.
 - Postman collection and environment can be found in jumpcloud-automation\postman. These can be imported back into Postman for running. The collection is runnable as long as the broken-hashserve application is running.
 - JMeter tests for load testing are located in jumpcloud-automation\jmeter\broken-hashserve.jmx. These can be run in jmeter or using terminal as long as the broken-hashserve application is running.
 
