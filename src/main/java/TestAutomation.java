@@ -5,14 +5,15 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.HashMap;
 import java.util.Map;
-import static io.restassured.RestAssured.get;
-import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.*;
 
 public class TestAutomation {
 
+    // Run the broken-hashserve application before running the tests. They are set it priority so the whole file can run
+
     final String baseURI = "http://127.0.0.1:8088";
 
-    @Test
+    @Test(priority = 5)
     public void shutdown() {
 
         final String shutdownCommand = "shutdown";
@@ -22,10 +23,11 @@ public class TestAutomation {
                 .when()
                 .post(baseURI + "/hash")
                 .then()
-                .statusCode(200);
+                .statusCode(200)
+                .log().all();
     }
 
-    @Test
+    @Test(priority = 4)
     public void getStats() {
 
         Response response = get( baseURI + "/stats");
@@ -38,7 +40,7 @@ public class TestAutomation {
         Assert.assertEquals(response.getStatusCode(), 200);
     }
 
-    @Test
+    @Test(priority = 3)
     public void getHashedPassword() {
 
         Response response = get(baseURI + "/hash/1");
@@ -52,7 +54,7 @@ public class TestAutomation {
         Assert.assertEquals(response.asString().length(), 88);
     }
 
-    @Test
+    @Test(priority = 1)
     public void returnJobIdentifier() {
 
         Map<String, Object> map = new HashMap<String, Object>();
@@ -70,7 +72,7 @@ public class TestAutomation {
                 .log().all();
     }
 
-    @Test
+    @Test(priority = 2)
     public void refactoredReturnJobIdentifier() {
 
         JSONObject request = new JSONObject();
